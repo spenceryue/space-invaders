@@ -13,7 +13,6 @@ export const LEVELS: Events["NEW_LEVEL"][] = [
         shields: [...Array(3)].flatMap((_, row) =>
             [...Array(Math.floor((GRID_SIZE.COLUMNS - 10) / 2))].map((_, column) => ({
                 column: 5 + Math.floor(column / 5) * 10 + (column % 5),
-                kind: "MINION" as const,
                 row: GRID_SIZE.ROWS - 8 + row,
             }))
         ),
