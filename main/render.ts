@@ -12,16 +12,16 @@ export function render(state: atom.of<State>, rootElement: HTMLElement): void {
     // Composite everything onto `frame`.
     {
         aliens.forEach(({ column, kind, row }) =>
-            setAt(frame, { BONUS: ALIEN_BONUS, MINION: ALIEN_MINION }[kind], row, column)
+            setAt.centered(frame, { BONUS: ALIEN_BONUS, MINION: ALIEN_MINION }[kind], row, column)
         );
 
         bullets.forEach(({ column, kind, row, /* TODO: Use for bullet trail? */ speed }) =>
-            setAt(frame, { ALIEN: ALIEN_BULLET, HUMAN: HUMAN_BULLET }[kind], row, column)
+            setAt.centered(frame, { ALIEN: ALIEN_BULLET, HUMAN: HUMAN_BULLET }[kind], row, column)
         );
 
-        shields.forEach(({ column, row }) => (frame[row][column] = SHIELD));
+        shields.forEach(({ column, row }) => setAt.centered(frame, SHIELD, row, column));
 
-        setAt(frame, SHIP, ship.row - SHIP.length, ship.column - SHIP[0].length);
+        setAt.centered(frame, SHIP, ship.row, ship.column);
     }
 
     rootElement.textContent = frame.map((row) => row.join("")).join("\n");

@@ -9,14 +9,14 @@ export const ALIEN_MINION = normalize("👾");
 
 export const GRID_SIZE = {
     COLUMNS: 60,
-    ROWS: 60,
+    ROWS: 40,
 };
 
 export const HUMAN_BULLET = normalize(`↑`);
 
 export const HUMAN_BULLET_SPEED: State.bullet["speed"] = 2;
 
-export const SHIELD = "⬜️";
+export const SHIELD = normalize("⬜️");
 
 export const SHIP = normalize(`\
  ▴
