@@ -1,6 +1,6 @@
 import { type State } from "./api.js";
 import { type atom } from "./atom.js";
-import { ALIEN_BONUS, ALIEN_BULLET, ALIEN_MINION, GRID_SIZE, HUMAN_BULLET, SHIP } from "./constants.js";
+import { ALIEN_BONUS, ALIEN_BULLET, ALIEN_MINION, GRID_SIZE, HUMAN_BULLET, SHIELD, SHIP } from "./constants.js";
 import { getState } from "./get-state.js";
 import { setAt } from "./render/set-at.js";
 
@@ -19,7 +19,7 @@ export function render(state: atom.of<State>, rootElement: HTMLElement): void {
             setAt(frame, { ALIEN: ALIEN_BULLET, HUMAN: HUMAN_BULLET }[kind], row, column)
         );
 
-        shields.forEach(({ column, row }) => (frame[row][column] = "⬜️"));
+        shields.forEach(({ column, row }) => (frame[row][column] = SHIELD));
 
         setAt(frame, SHIP, ship.row - SHIP.length, ship.column - SHIP[0].length);
     }

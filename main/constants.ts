@@ -16,6 +16,8 @@ export const HUMAN_BULLET = normalize(`↑`);
 
 export const HUMAN_BULLET_SPEED: State.bullet["speed"] = 2;
 
+export const SHIELD = "⬜️";
+
 export const SHIP = normalize(`\
  ▴
 /▲\\\
