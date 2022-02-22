@@ -1,7 +1,5 @@
-/// <reference lib="DOM" />
-
 import { Events, State } from "./api.js";
-import { atom } from "./atom.js";
+import { type atom } from "./atom.js";
 import { getState } from "./get-state.js";
 
 export function useKeyboard(state: atom.of<State>): () => void {

@@ -1,5 +1,5 @@
-import { State } from "./api.js";
-import { atom } from "./atom.js";
+import { type State } from "./api.js";
+import { type atom } from "./atom.js";
 import { getState } from "./get-state.js";
 
 export function useResizeObserver(state: atom.of<State>, rootElement: HTMLElement): () => void {

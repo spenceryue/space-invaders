@@ -1,12 +1,12 @@
 /// <reference lib="DOM" />
 
-import { atom } from "./atom.js";
-import { STATE_EMPTY } from "./constants.js";
-import { getState } from "./get-state.js";
-import { LEVELS } from "./levels.js";
-import { render } from "./render.js";
-import { useKeyboard } from "./use-keyboard.js";
-import { useResizeObserver } from "./use-resize-observer.js";
+import { atom } from "./main/atom.js";
+import { STATE_EMPTY } from "./main/constants.js";
+import { getState } from "./main/get-state.js";
+import { LEVELS } from "./main/levels.js";
+import { render } from "./main/render.js";
+import { useKeyboard } from "./main/use-keyboard.js";
+import { useResizeObserver } from "./main/use-resize-observer.js";
 
 // State:
 //   Level 1 map aliens
@@ -43,7 +43,7 @@ import { useResizeObserver } from "./use-resize-observer.js";
 //               ↗         ↗          ↗
 //             0          1          2
 
-async function main() {
+function main() {
     const rootElement = document.body;
 
     const state = atom(

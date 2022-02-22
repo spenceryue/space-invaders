@@ -1,5 +1,5 @@
 import { type State } from "./api.js";
-import { normalize } from "./normalize.js";
+import { normalize } from "./constants/normalize.js";
 
 export const ALIEN_BONUS = normalize("👽");
 
