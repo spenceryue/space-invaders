@@ -47,7 +47,7 @@ function main() {
     const rootElement = document.body;
 
     const state = atom(
-        getState.INITIALIZE(STATE_EMPTY, {
+        getState.INIT(STATE_EMPTY, {
             NEW_LEVEL: LEVELS[0],
             RESIZE: rootElement.getBoundingClientRect(),
         })

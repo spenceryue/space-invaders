@@ -27,7 +27,7 @@ export namespace State {
 
 export type Events = {
     FRAME: State["time"];
-    INITIALIZE: Pick<Events, "NEW_LEVEL" | "RESIZE">;
+    INIT: Pick<Events, "NEW_LEVEL" | "RESIZE">;
     KEYDOWN: Events.Key;
     NEW_LEVEL: Pick<State, "aliens" | "shields">;
     RESIZE: Events.Dimensions;

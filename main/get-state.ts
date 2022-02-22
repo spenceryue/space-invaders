@@ -29,7 +29,7 @@ getState.FRAME = (old, time) => ({
     time,
 });
 
-getState.INITIALIZE = (old, { NEW_LEVEL, RESIZE }) => getState(old, ["NEW_LEVEL", NEW_LEVEL], ["RESIZE", RESIZE]);
+getState.INIT = (old, { NEW_LEVEL, RESIZE }) => getState(old, ["NEW_LEVEL", NEW_LEVEL], ["RESIZE", RESIZE]);
 
 getState.KEYDOWN = (old, key) => ({
     ...old,
