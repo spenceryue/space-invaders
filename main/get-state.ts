@@ -1,4 +1,4 @@
-import { type Events, State } from "./api.js";
+import { type Events, type State } from "./api.js";
 import { GRID_SIZE, HUMAN_BULLET_SPEED } from "./constants.js";
 
 export type getState = getState.Signature & {
